@@ -1,0 +1,8 @@
+{
+    "sayHello": "Say Hello",
+    "hello": "Hello World!",
+    "newteam":{
+        "addConfig":"Configure Team"
+
+    }
+}
