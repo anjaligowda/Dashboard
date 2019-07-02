@@ -15,6 +15,36 @@ define([
         View: View,
 
         onViewReady: function () {
+            var counter =0;
+           // alert(counter)
+            this.view.getButton().addEventHandler('click', this.sendMessage, this);
+            this.view.getAppendButton().addEventHandler('click', function(){
+                counter++;
+              var input = document.createElement("input");
+              //var br = document.createElement('br');
+            // alert(input)
+             
+              input.type = 'text';
+              input.className = 'ebInput ebInput_labeled_top eb_wMargin ebInput'+counter;
+              input.placeholder = 'Type' + counter;
+              
+            //  alert(counter)
+           //   console.log(input.append(br))
+              console.log(this.view.getInputForm().getNative())
+              this.view.getInputForm().getNative().append(input);
+
+
+
+             // type="text" class="eaDashboard_app-wMyWidget-teamMembers ebInput ebInput_labeled_top eb_wMargin" placeholder="Type"
+            }, this);
+
+            this.view.getDeleteButton().addEventHandler('click', function(){
+                
+                var ele = this.view.getElement().find('.ebInput'+counter);
+                ele.getNative().remove();
+                counter--;
+
+            },this);
             this.view.getButton().addEventHandler('click', this.sendMessage, this);
 
         },
@@ -43,6 +73,7 @@ define([
         	messageService.sendMessage(formData, this.addNewMessage.bind(this)); */
 
         },
+       
         onDestroy: function () {
 
         }

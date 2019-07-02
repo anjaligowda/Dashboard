@@ -21,13 +21,7 @@ define([
                     breadcrumb: this.options.breadcrumb,
                     title: this.options.properties.title,
                     context: this.getContext(),
-                    defaultActions: [/* {
-                        type: 'button',
-                        name: dictionary.sayHello,
-                        action: function () {
-                            eventBus.publish('sayhello');
-                        }
-                    } */,{
+                    defaultActions: [{
                     name: dictionary.get('newteam.addConfig'),
                     type: 'button',
                     action: function () {

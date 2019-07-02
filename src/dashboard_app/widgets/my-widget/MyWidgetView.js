@@ -29,7 +29,17 @@ define([
         },
         getReposName: function () {
             return this.getElement().find(_prefix + '-reposName');
+        },
+        getAppendButton: function () {
+            return this.getElement().find(_prefix + '-appendBtn');
+        },
+        getDeleteButton: function () {
+            return this.getElement().find(_prefix + '-deleteBtn');
+        },
+        getInputForm: function (){
+             return this.getElement().find('.ebTeam');
         }
+
     });
 
 });
