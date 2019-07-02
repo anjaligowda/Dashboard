@@ -14,6 +14,9 @@ define([
 
         /**
          * Called when the app is first instantiated in the current tab for the first time.
+         * sad;;ad
+         * sadasd
+         * asdasd
          */
         onStart: function () {
             var eventBus = this.getEventBus(),
@@ -30,7 +33,7 @@ define([
                             width: '400px',
                             content: new MyWidget()
                         });
-                        
+                         
                     }
                      } ]
                 });
